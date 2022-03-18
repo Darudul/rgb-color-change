@@ -1,0 +1,20 @@
+window.onload = () => {
+  main();
+};
+
+function main() {
+  const root = document.getElementById("root");
+  const handle = document.getElementById("handle-btn");
+  handle.addEventListener("click", function () {
+    console.log("ghjjk");
+    const rgbColor = generateColor();
+    root.style.backgroundColor = rgbColor;
+  });
+}
+
+function generateColor() {
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
